@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rotace {
+
+    background-color:rgb(205, 249, 255);
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    animation: rotace-xy 10s linear infinite;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.kulicka {
+    background-color: aqua;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    animation-name: skakani;
+    animation-duration: .9s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;   
+}
+
+
+#kulicka2 {
+    animation-delay: .3s;
+}
+
+#kulicka3 {
+    animation-delay: .6s;
+}
+
+
+@keyframes skakani {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 8px;
+    }
+    50% {
+        top: 0px;
+    }
+    75% {
+        top: -8px;
+    }
+    100% {
+        top: 0px;
+    }
+} 
+
+@keyframes rotace-xy {
+
+    0% {transform: rotateX(360deg);}
+    50% {transform: rotateX(0deg);}
+    50% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+
+
+
+}
+
+
